@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.smitcoderx.wall_pie.Ui.Home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_singleFragment"
+            app:destination="@id/singleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/favFragment"
+        android:name="com.smitcoderx.wall_pie.Ui.Fav.FavFragment"
+        android:label="fragment_fav"
+        tools:layout="@layout/fragment_fav" >
+        <action
+            android:id="@+id/action_favFragment_to_singleFragment"
+            app:destination="@id/singleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.smitcoderx.wall_pie.Ui.Search.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" >
+        <action
+            android:id="@+id/action_searchFragment_to_singleFragment"
+            app:destination="@id/singleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/categoryFragment"
+        android:name="com.smitcoderx.wall_pie.Ui.Categories.CategoryFragment"
+        android:label="fragment_category"
+        tools:layout="@layout/fragment_category" >
+        <action
+            android:id="@+id/action_categoryFragment_to_singleCategoryFragment"
+            app:destination="@id/singleCategoryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.smitcoderx.wall_pie.Ui.Setting.SettingFragment"
+        android:label="fragment_setting"
+        tools:layout="@layout/fragment_setting" />
+    <fragment
+        android:id="@+id/singleFragment"
+        android:name="com.smitcoderx.wall_pie.Ui.SingleScreen.SingleFragment"
+        android:label="SingleFragment" >
+        <argument
+            android:name="photo"
+            app:argType="com.smitcoderx.wall_pie.Models.UnsplashPhoto" />
+    </fragment>
+    <fragment
+        android:id="@+id/singleCategoryFragment"
+        android:name="com.smitcoderx.wall_pie.Ui.Categories.SingleCategoryFragment"
+        android:label="fragment_single_category"
+        tools:layout="@layout/fragment_single_category" >
+        <action
+            android:id="@+id/action_singleCategoryFragment_to_singleFragment"
+            app:destination="@id/singleFragment" />
+        <argument
+            android:name="categoryTypes"
+            app:argType="com.smitcoderx.wall_pie.Models.CategoryTypes" />
+    </fragment>
+</navigation>
