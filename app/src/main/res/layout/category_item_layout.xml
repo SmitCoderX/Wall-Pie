@@ -13,9 +13,9 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:alpha="0.7"
-        android:background="@drawable/searchbar_background"
-        app:tint="@color/semi_transparent_black">
+        android:alpha="0.8"
+        app:tint="@color/black">
+
 
         <ImageView
             android:id="@+id/ivCategory"
@@ -31,7 +31,7 @@
 
         <TextView
             android:id="@+id/tvCategoryNames"
-            style="@style/TextBody"
+            android:textColor="@color/white"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/pacifico"
